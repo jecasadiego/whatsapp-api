@@ -1,1 +1,1 @@
-FROM devopsdotcom/waha
+FROM devopsnow/waha
