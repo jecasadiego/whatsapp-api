@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  waha:
+    image: devlikeapro/waha
+    container_name: waha
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./.waha-data:/app/.waha
+    env_file:
+      - .env
+    environment:
+      # Configuraciones de WAHA por defecto (opcional, pero útil)
+      - WAHA_LOG_LEVEL=info
